@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		<textarea id = "text" placeholder="Feedback.."></textarea>
+        <br>
+        <input type="checkbox" id = "check" onclick = "check()" />
+        <label for = "check">Blur feedback</label>
+        <script>
+            function check () {
+                if (document.getElementById ("check").checked) {
+                    document.getElementById ("text").style.filter = "blur(3.5px)";
+                } else {
+                    document.getElementById ("text").style.filter = "blur(0px)";
+                }
+            }
+        </script>
+        <style>body {
+	text-align:center;
+}
+
+textarea {
+    width:300px;
+    height:100px;
+    resize:none;
+    text-indent:10px;
+    border-radius:15px;
+    outline:none;
+    transition:all 1s;
+    border:skyblue solid 1px;
+}</style>
+	</body>
+</html>
