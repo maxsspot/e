@@ -9,11 +9,17 @@
         <input type="checkbox" id = "check" onclick = "check()" />
         <label for = "check">Blur feedback</label>
         <script>
+	    var sum = localStorage.getItem ("blur")
+	    if (sum.value = "true") {
+		    document.getElementById ("text").style.filter = "blur(3.5px)";
+	    }
             function check () {
                 if (document.getElementById ("check").checked) {
+		    localStorage.setItem ("blur","true");
                     document.getElementById ("text").style.filter = "blur(3.5px)";
                 } else {
                     document.getElementById ("text").style.filter = "blur(0px)";
+		    localStorage.clear ();
                 }
             }
         </script>
